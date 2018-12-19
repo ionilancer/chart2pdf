@@ -280,12 +280,32 @@ function openWIndows(){
 
 
 	}, false);
+	function showAbout() {
 
+		
+		let win = new BrowserWindow({
+			width: 400, 
+			height: 400,
+			backgroundColor: '#2e2c29',
+			frame: true,
+			show:false,
+			minimizable: false,
+			maximizable: false});
+			win.setResizable(false);
+			win.openDevTools();
+			win.setMenu(null);
+			
+			win.loadURL(`file://${__dirname}/about/index.html`)
+		win.webContents.once('dom-ready', () => {
+			//alert("load")
+			win.show()			
+		});
+	}
 	document.querySelector('#btn_plus').addEventListener('click', addRow)
 	document.querySelector('#btn_create').addEventListener('click', createPDF)
 	document.querySelector('#btn_open').addEventListener('click', openPDF)
 	document.querySelector('#btn_resume').addEventListener('click', showResume)
-
+	document.querySelector('#btn_about').addEventListener('click', showAbout)
 
 	function formatDate(date, format, utc) {
 		var MMMM = ["\x00", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
