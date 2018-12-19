@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My App With ElectronJS</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body>  
+      <div id="chartContainer" class="oculto" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto;margin-top: 30px;"></div>
+     
+      <h1>C2P <span>V 0.1</span><span id="sp_date"></span> </h1>
+      <div id="form">
+        
+        <div id="tablePDF">
+          <span><select id="ddl_index" name="Indice">
+          </select> </span>
+          <span><select class="ddlTable" name="Operacion" id="ddl_ope">
+              <option value="buy">Buy</option>
+              <option value="sell">sell</option>
+          </select> </span>
+          <span>
+              <input class="txtTable"name="Entrada" type="text" id="txt_entry" placeholder="Entry"> <br>
+          </span>
+          <span>
+              <input class="txtTable"name="TP" type="text"id="txt_tp" placeholder="TP" > 
+          </span>
+          <span>
+             <input class="txtTable" name="Puntos"type="text"id="txt_pt" placeholder="Points" > 
+          </span>
+          <span>
+              <input class="txtTable"name="Tic" type="text"id="txt_tic" placeholder="Tick" > 
+           </span>
+           <span><select name="Resultado" class="green ddlTable" id="ddl_Res">
+              <option  value="Positivo">Positivo</option>
+              <option  class="red"value="Negativo">Negativo</option>
+          </select> </span>
+        </br>
+      </div>
+    </div>  
+    <div class="barDown">
+        <button class="action" id="btn_plus"><i class="glyphicon glyphicon-plus"></i> </button>
+        <button class="action" id="btn_create"><i class="glyphicon glyphicon-save"></i> </button>
+        <button class="action" id="btn_open"><i class="glyphicon glyphicon-search"></i></button>
+        <button class="action" id="btn_resume"><i class="glyphicon glyphicon-eye-open"></i></button>
+    </div>
+
+
+  <hr id="separador1"/>
+  <ul id="rowList">  
+
+  </ul>
+    <script>   
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

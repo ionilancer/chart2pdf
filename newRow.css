@@ -1,0 +1,29 @@
+.newRowForm{width: 80%;
+    margin: 0 auto;}
+    #newRowForm label {
+        vertical-align: top;
+        width: 20%;
+        display: inline-block;}
+.newRowForm span{font-size: 26px;display: inline-block;
+    font-size: 26px;
+    width: 100%;
+margin: 10px 0;}
+input,textarea{
+    font-size: 26px;
+    width: 100%;
+}
+.newRowForm button.action {
+    border: none;
+    vertical-align: top;
+    font-size: 26px;
+    display: inline-block;
+    font-size: 26px;
+    margin: 19px 0 0 10px;
+    width: 45%;
+    }
+    .elemntImg{max-width:210px ;}
+   #btn_img {
+        background: transparent;
+    border: navajowhite;
+    }
+    
