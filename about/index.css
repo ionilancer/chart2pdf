@@ -3,5 +3,8 @@
 }
 .about p {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 18px;
+}
+.about img{
+    max-width: 25px;
 }
